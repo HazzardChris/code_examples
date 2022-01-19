@@ -58,7 +58,18 @@
 
     console.log(mapIter.next().value)  // ["0", "foo"]
     console.log(mapIter.next().value)  // [1, "bar"]
-    console.log(mapIter.next().value)  // [Object, "baz"]
+console.log(mapIter.next().value)  // [Object, "baz"]
+    
+  //weakMaps - limited functionality, allows garbage collection
+  {
+    let a = {
+      a:[1,2]
+    }
+    const wm = new WeakMap();
+    wm.set(a,'a');
+    console.log(wm);
+  }
+  console.log(wm); //outside of declaration scope so garbage collected
 
 
 
